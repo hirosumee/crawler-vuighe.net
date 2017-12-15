@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="test">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script>
+  var socket = io();
+  console.log('a')
+  socket.on('data',(data)=>{
+     data.forEach(elem => {
+        document.getElementById('test').insertAdjacentHTML('beforeend','<img src="'+elem.src+'"'+' alt="'+elem.alt+'"'+'/>');
+     });
+  })
+</script>
+  </body>
+</html>
