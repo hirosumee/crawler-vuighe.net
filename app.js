@@ -40,7 +40,7 @@ var c = new Crawler({
 // Queue just one URL, with default callback
 c.refesh=function(){
      c.queue(['http://vuighe.net','https://noname9x.herokuapp.com']);
-      setTimeout(()=>{c.refesh()},20000);
+      setTimeout(()=>{c.refesh()},300000);
 }
 c.refesh();
 //
