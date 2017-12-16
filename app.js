@@ -22,15 +22,20 @@ var c = new Crawler({
             //a lean implementation of core jQuery designed specifically for the server
             var arr=$(".tray-item-thumbnail");
             express.data_crawl=[];
-            for( i=0;i<10;i++)
+            if(express.data_crawl.length==0||arr[0].attribs.src!=express.data_crawl[0].src)
             {
-              if(arr[i])
+              for( i=0;i<10;i++)
               {
-                console.log(arr[i].attribs);
-                express.data_crawl.push(arr[i].attribs);
+                if(arr[i])
+                {
+                  console.log(arr[i].attribs);
+                  express.data_crawl.push(arr[i].attribs);
+                }
               }
             }
+            else {
 
+            }
         }
 
         // setTimeout(()=>{c.queue(['http://vuighe.net','https://noname9x.herokuapp.com']);},120000);
