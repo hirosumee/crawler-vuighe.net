@@ -44,7 +44,7 @@ var c = new Crawler({
 });
 // Queue just one URL, with default callback
 c.refesh=function(){
-     c.queue(['http://vuighe.net','https://noname9x.herokuapp.com','https://getmark.azurewebsites.net/']);
+     c.queue(['http://vuighe.net','https://noname9x.herokuapp.com','https://getmark.azurewebsites.net/','https://ginspoj.azurewebsites.net/']);
       setTimeout(()=>{c.refesh()},300000);
 }
 c.refesh();
